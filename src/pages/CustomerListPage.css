@@ -1,0 +1,81 @@
+/* General customer list layout */
+.customerlist-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f7fc;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar remains the same */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Customer Table Styling */
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.customer-table th, .customer-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.customer-table th {
+  background-color: #008cba;
+  color: white;
+}
+
+.customer-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.customer-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.customer-table td {
+  color: #333;
+}
+
+/* Status colors */
+.customer-table td:last-child {
+  font-weight: bold;
+}
+
+.customer-table td:last-child[data-status="Active"] {
+  color: green;
+}
+
+.customer-table td:last-child[data-status="Inactive"] {
+  color: red;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .customer-table {
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-table th, .customer-table td {
+    padding: 8px 10px;
+  }
+
+  .main-content {
+    padding: 0.5rem;
+  }
+}
